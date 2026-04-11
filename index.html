@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Path - Find Your Career</title>
+    <!-- Modern Typography: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Marked library to render markdown from Gemini -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="background-container">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <main class="app-container">
+        <header>
+            <h1>Future Path</h1>
+            <p>Discover your ideal career journey.</p>
+        </header>
+
+        <section class="api-key-section">
+            <label for="apiKey">Gemini API Key</label>
+            <input type="password" id="apiKey" placeholder="Enter your Gemini API Key..." />
+            <small>Required to generate career paths</small>
+        </section>
+
+        <section class="form-section">
+            <div class="input-group">
+                <label for="interest">Student's / Your Interest</label>
+                <input type="text" id="interest" placeholder="e.g., Computer Science, Art, Space, Robotics..." />
+            </div>
+
+            <div class="input-group">
+                <label for="educationLevel">Current Education Level</label>
+                <select id="educationLevel">
+                    <option value="" disabled selected>Select your current level</option>
+                    <option value="school">School Completed</option>
+                    <option value="college">College / University Degree</option>
+                </select>
+            </div>
+
+            <div class="input-group" id="marksGroup" style="display: none;">
+                <label for="marks" id="marksLabel">Academic Performance</label>
+                <input type="text" id="marks" placeholder="Enter your percentage or CGPA" />
+            </div>
+
+            <div class="input-group" id="branchGroup" style="display: none;">
+                <label for="branch">Branch of Degree</label>
+                <input type="text" id="branch" placeholder="e.g., Mechanical Engineering, Finance, Psychology..." />
+            </div>
+
+            <div class="input-group">
+                <label for="ambition">Ambition / Dream</label>
+                <input type="text" id="ambition" placeholder="e.g., To become an astronaut, to build a startup..." />
+            </div>
+
+            <button id="submitBtn" class="primary-btn">
+                <span class="btn-text">Show My Career</span>
+                <span class="loader" style="display: none;"></span>
+            </button>
+        </section>
+
+        <section id="resultsSection" class="results-section hidden">
+            <!-- Results will be injected here -->
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
